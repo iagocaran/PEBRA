@@ -2,38 +2,45 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="white"
       dark
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="APEX Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          :src="require('@/assets/apex.png')"
           transition="scale-transition"
-          width="40"
+          width="100"
         />
 
         <v-img
-          alt="Vuetify Name"
+          alt="PEBra Logo"
           class="shrink mt-1 hidden-sm-and-down"
           contain
           min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
+          :src="require('@/assets/pebra.png')"
+          width="150"
         />
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn text>
+        <v-icon color="light-blue darken-3">mdi-sitemap</v-icon>
+      </v-btn>
+      <v-btn text>
+        <v-icon color="light-blue darken-3">mdi-format-font-size-decrease</v-icon>
+      </v-btn>
+      <v-btn text>
+        <v-icon color="light-blue darken-3">mdi-format-font-size-increase</v-icon>
+      </v-btn>
+      <v-btn text>
+        <v-icon color="light-blue darken-3">mdi-contrast-circle</v-icon>
+      </v-btn>
+      <v-btn text>
+        <span class="light-blue--text text--darken-3">Entrar</span>
       </v-btn>
     </v-app-bar>
 
@@ -59,3 +66,9 @@ export default Vue.extend({
   }),
 });
 </script>
+
+<style scoped>
+  .theme--light.v-application {
+    background: #EBEBEB !important;
+  }
+</style>
