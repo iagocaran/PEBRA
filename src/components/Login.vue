@@ -3,6 +3,7 @@
     <v-img src="@/assets/apex.png"></v-img>
     <v-tabs v-model="tab" centered>
       <v-tab>Conectar</v-tab>
+      <div style="width: 60px"></div>
       <v-tab>Cadastrar</v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
