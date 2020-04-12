@@ -1,6 +1,6 @@
 <template>
   <v-card class="text-center pa-6">
-    <v-img src="@/assets/apex.png"></v-img>
+    <v-img class="mb-4" src="@/assets/apex.png"></v-img>
     <v-tabs v-model="tab" centered>
       <v-tab>Conectar</v-tab>
       <div style="width: 60px"></div>
