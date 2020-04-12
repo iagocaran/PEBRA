@@ -53,7 +53,7 @@
         2020 - Apex Brasil
       </v-col>
     </v-footer>
-    <v-dialog v-model="dialog" persistent max-width="400">
+    <v-dialog v-model="dialog" max-width="400">
       <login></login>
     </v-dialog>
   </v-app>
