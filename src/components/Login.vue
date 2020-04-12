@@ -31,7 +31,8 @@
           <v-text-field label="Senha" type="password" hide-details="auto" :rules="passwordRules"></v-text-field>
           <v-checkbox v-model="terms" required>
             <template v-slot:label>
-              Li e aceito os <span class="light-blue--text text--darken-3 ml-1" style="text-decoration: underline">Termos de Uso</span>
+<!-- TODO Create function to control dialog-->
+              Li e aceito os <v-btn text @click="termsDialog = true" class="pa-1 light-blue--text text--darken-3" style="text-decoration: underline">Termos de Uso</v-btn>
             </template>
           </v-checkbox>
           <v-btn color="primary" block>Entrar</v-btn>
@@ -46,18 +47,25 @@
         </v-card>
       </v-tab-item>
     </v-tabs-items>
+    <v-dialog v-model="termsDialog" max-width="800">
+      <terms></terms>
+    </v-dialog>
   </v-card>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
+  import Terms from '@/components/Terms'
 
   export default Vue.extend({
     name: 'Login',
-
+    components: {
+      Terms
+    },
     data: () => ({
       tab: 0,
       terms: false,
+      termsDialog: false,
       email: '',
       emailRules: [
         v => !!v || 'Digite seu e-mail',
