@@ -19,9 +19,9 @@
             <span class="pa-2 text-uppercase font-weight-medium grey--text text--darken-1">Ou</span>
           </div>
           <div class="d-flex justify-space-around mb-4">
-            <v-btn text><v-icon size="50" color="grey darken-1">mdi-google</v-icon></v-btn>
-            <v-btn text><v-icon size="50" color="grey darken-1">mdi-linkedin</v-icon></v-btn>
-            <v-btn text><v-icon size="50" color="grey darken-1">mdi-microsoft</v-icon></v-btn>
+            <v-btn text fab><v-icon size="50" color="grey darken-1">mdi-google</v-icon></v-btn>
+            <v-btn text fab><v-icon size="50" color="grey darken-1">mdi-linkedin</v-icon></v-btn>
+            <v-btn text fab><v-icon size="50" color="grey darken-1">mdi-microsoft</v-icon></v-btn>
           </div>
         </v-card>
       </v-tab-item>
@@ -39,9 +39,9 @@
             <span class="pa-2 text-uppercase font-weight-medium grey--text text--darken-1">Ou</span>
           </div>
           <div class="d-flex justify-space-around mb-4">
-            <v-btn text><v-icon size="50" color="grey darken-1">mdi-google</v-icon></v-btn>
-            <v-btn text><v-icon size="50" color="grey darken-1">mdi-linkedin</v-icon></v-btn>
-            <v-btn text><v-icon size="50" color="grey darken-1">mdi-microsoft</v-icon></v-btn>
+            <v-btn text fab><v-icon size="50" color="grey darken-1">mdi-google</v-icon></v-btn>
+            <v-btn text fab><v-icon size="50" color="grey darken-1">mdi-linkedin</v-icon></v-btn>
+            <v-btn text fab><v-icon size="50" color="grey darken-1">mdi-microsoft</v-icon></v-btn>
           </div>
         </v-card>
       </v-tab-item>
