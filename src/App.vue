@@ -47,6 +47,12 @@
     <v-content>
       <router-view></router-view>
     </v-content>
+
+    <v-footer color="white" elevation="8">
+      <v-col class="text-center">
+        2020 - Apex Brasil
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
