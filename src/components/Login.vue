@@ -9,8 +9,8 @@
     <v-tabs-items v-model="tab">
       <v-tab-item>
         <v-card flat>
-          <v-text-field label="E-mail" required hide-details="auto"></v-text-field>
-          <v-text-field label="Senha" type="password" hide-details="auto"></v-text-field>
+          <v-text-field label="E-mail" required hide-details="auto" :rules="emailRules"></v-text-field>
+          <v-text-field label="Senha" type="password" hide-details="auto" :rules="passwordRules"></v-text-field>
           <div class="text-right mb-2">
             <v-btn text class="caption light-blue--text text--darken-3">Esqueceu sua senha?</v-btn>
           </div>
@@ -27,9 +27,9 @@
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
-          <v-text-field label="E-mail" required hide-details="auto"></v-text-field>
-          <v-text-field label="Senha" type="password" hide-details="auto"></v-text-field>
-          <v-checkbox v-model="terms">
+          <v-text-field label="E-mail" required hide-details="auto" :rules="emailRules"></v-text-field>
+          <v-text-field label="Senha" type="password" hide-details="auto" :rules="passwordRules"></v-text-field>
+          <v-checkbox v-model="terms" required>
             <template v-slot:label>
               Li e aceito os <span class="light-blue--text text--darken-3 ml-1" style="text-decoration: underline">Termos de Uso</span>
             </template>
@@ -56,8 +56,16 @@
     name: 'Login',
 
     data: () => ({
-        tab: 0,
-        terms: false
+      tab: 0,
+      terms: false,
+      email: '',
+      emailRules: [
+        v => !!v || 'Digite seu e-mail',
+        v => /.+@.+/.test(v) || 'O endereço de e-mail precisa ser válido',
+      ],
+      passwordRules: [
+        v => !!v || 'Digite sua senha'
+      ]
     }),
   })
 </script>
