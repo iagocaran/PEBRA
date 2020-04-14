@@ -29,10 +29,9 @@
         <v-card flat>
           <v-text-field label="E-mail" required hide-details="auto" :rules="emailRules"></v-text-field>
           <v-text-field label="Senha" type="password" hide-details="auto" :rules="passwordRules"></v-text-field>
-          <v-checkbox v-model="terms" required>
+          <v-checkbox v-model="terms" hide-details="true" class="mb-2" required>
             <template v-slot:label>
-<!-- TODO Create function to control dialog-->
-              Li e aceito os <v-btn text @click="termsDialog = true" class="pa-1 light-blue--text text--darken-3" style="text-decoration: underline">Termos de Uso</v-btn>
+              Li e aceito os <v-btn text @click.stop="termsDialog = true" class="d-inline-block pa-1 light-blue--text text--darken-3" style="text-decoration: underline">Termos de Uso</v-btn>
             </template>
           </v-checkbox>
           <v-btn color="primary" block>Entrar</v-btn>
