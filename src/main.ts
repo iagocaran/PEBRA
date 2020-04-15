@@ -8,9 +8,9 @@ import axios from 'axios'
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
-Vue.prototype.$vuetify = vuetify;
 
 new Vue({
+  vuetify,
   router,
   store,
   render: h => h(App)
