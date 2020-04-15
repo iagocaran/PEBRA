@@ -18,8 +18,7 @@
       <p>A EXPORTA BRASIL não poderá ser responsabilizada, em nenhum caso, por quaisquer danos diretos, indiretos, casuais e especiais relacionados ou derivados deste site ou de seu uso, ou de qualquer site ou recurso vinculado, informação referenciada ou acessada por meio deste site, ou por uso ou download, ou acesso a quaisquer materiais, informações, produtos e serviços, incluindo, sem limitação, qualquer perda de lucros, interrupção de negócios, economias perdidas, perda de programas ou outros dados. Esta exclusão e renúncia de responsabilidade se aplicam a todas as causas de ação.</p>
       <p>A EXPORTA BRASIL se reserva o direito de alterar os termos e condições, bem como os conteúdos do site, a qualquer momento, sem aviso prévio. Se desejar esclarecer alguma dúvida relativa à privacidade do site www.EXPORTA BRASIL.com.br, por favor, entre em contato conosco pelo e-mail seguranca@EXPORTA BRASIL.com.br.</p>
     </div>
-<!-- TODO: Add close behavior -->
-    <v-btn color="primary" block>Continuar</v-btn>
+    <v-btn color="primary" block @click="close">Continuar</v-btn>
   </v-card>
 </template>
 
@@ -28,9 +27,13 @@
 
   export default Vue.extend({
     name: 'Terms',
-
     data: () => ({
     }),
+    methods: {
+      close() {
+        this.$emit('close', true)
+      }
+    }
   })
 </script>
 
