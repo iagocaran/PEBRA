@@ -14,7 +14,7 @@
           <div class="text-right mb-2">
             <v-btn text class="caption light-blue--text text--darken-3">Esqueceu sua senha?</v-btn>
           </div>
-          <v-btn color="primary" block>Entrar</v-btn>
+          <v-btn color="primary" block @click="close()">Entrar</v-btn>
           <div class="line-center ma-4">
             <span class="pa-2 text-uppercase font-weight-medium grey--text text--darken-1">Ou</span>
           </div>
@@ -34,7 +34,7 @@
               Li e aceito os <v-btn text @click.stop="termsDialog = true" class="d-inline-block pa-1 light-blue--text text--darken-3" style="text-decoration: underline">Termos de Uso</v-btn>
             </template>
           </v-checkbox>
-          <v-btn color="primary" block>Entrar</v-btn>
+          <v-btn color="primary" block @click="close()">Entrar</v-btn>
           <div class="line-center ma-4">
             <span class="pa-2 text-uppercase font-weight-medium grey--text text--darken-1">Ou</span>
           </div>
@@ -74,6 +74,12 @@
         v => !!v || 'Digite sua senha'
       ]
     }),
+    methods: {
+      close() {
+        this.$emit('close', true);
+        this.$router.push('user');
+      }
+    }
   })
 </script>
 

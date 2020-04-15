@@ -54,7 +54,7 @@
       </v-col>
     </v-footer>
     <v-dialog v-model="dialog" max-width="400">
-      <login></login>
+      <login @close="dialog = false"></login>
     </v-dialog>
   </v-app>
 </template>
