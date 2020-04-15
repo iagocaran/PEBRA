@@ -47,7 +47,7 @@
       </v-tab-item>
     </v-tabs-items>
     <v-dialog v-model="termsDialog" max-width="800">
-      <terms></terms>
+      <terms @close="termsDialog = false"></terms>
     </v-dialog>
   </v-card>
 </template>
