@@ -64,7 +64,8 @@
             <v-treeview dense :items="items" open-all>
               <template v-slot:prepend="{ item }">
                 <v-icon v-if="item.type === 'file'" color="red">mdi-file-pdf</v-icon>
-                <v-simple-checkbox color="success" v-model="item.check" v-if="item.type === 'topic'"></v-simple-checkbox>
+                <v-icon v-else-if="item.type === 'link'" color="blue">mdi-open-in-new</v-icon>
+                <v-simple-checkbox color="success" v-model="item.check" v-else></v-simple-checkbox>
               </template>
             </v-treeview>
           </v-card-text>
@@ -96,7 +97,14 @@
           id: 3,
           name: 'Aproxime-se das tradings',
           type: 'topic',
-          check: true
+          check: true,
+          children: [
+            {
+              id: 7,
+              name: 'Ver calendário de eventos',
+              type: 'link'
+            }
+          ]
         },{
           id: 4,
           name: 'Participe dos nossos projetos',
