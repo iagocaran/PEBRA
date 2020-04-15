@@ -16,32 +16,14 @@
               </div>
             </v-card>
             <v-card raised class="mb-3">
-              <v-card-actions>
-                <v-btn text>
-                  <v-icon color="light-blue darken-3">mdi-briefcase</v-icon><br/>
-                  Meu Negócio
-                </v-btn>
-                <v-btn text>
-                  <v-icon color="light-blue darken-3">mdi-cog</v-icon>
-                  Ferramentas
-                </v-btn>
-                <v-btn text>
-                  <v-icon color="light-blue darken-3">mdi-calendar</v-icon>
-                  Eventos
-                </v-btn>
-                <v-btn text>
-                  <v-icon color="light-blue darken-3">mdi-chart-line</v-icon>
-                  Estudos
-                </v-btn>
-                <v-btn text>
-                  <v-icon color="light-blue darken-3">mdi-account-group</v-icon>
-                  Contato
-                </v-btn>
-                <v-btn text>
-                  <v-icon color="light-blue darken-3">mdi-account</v-icon>
-                  Perfil
-                </v-btn>
-              </v-card-actions>
+              <div class="d-flex justify-space-around">
+                <vertical-button icon="mdi-briefcase">Meu Negócio</vertical-button>
+                <vertical-button icon="mdi-cog">Ferramentas</vertical-button>
+                <vertical-button icon="mdi-calendar">Eventos</vertical-button>
+                <vertical-button icon="mdi-chart-line">Estudos</vertical-button>
+                <vertical-button icon="mdi-account-group">Contato</vertical-button>
+                <vertical-button icon="mdi-account">Perfil</vertical-button>
+              </div>
             </v-card>
             <v-card raised class="mb-3">
               <!-- TODO: Setup subnavigation -->
@@ -77,10 +59,13 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import VerticalButton from "@/components/VerticalButton.vue";
 
   export default Vue.extend({
     name: 'Home',
-
+    components: {
+      VerticalButton
+    },
     data: () => ({
       items: [
         {
