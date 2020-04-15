@@ -8,10 +8,10 @@ import axios from 'axios'
 
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
+Vue.prototype.$vuetify = vuetify;
 
 new Vue({
   router,
   store,
-  vuetify,
   render: h => h(App)
 }).$mount('#app')

@@ -59,7 +59,7 @@
   </v-app>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue';
 import Login from '@/components/Login'
 

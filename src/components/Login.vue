@@ -52,7 +52,7 @@
   </v-card>
 </template>
 
-<script lang="ts">
+<script>
   import Vue from 'vue'
   import Terms from '@/components/Terms'
 
