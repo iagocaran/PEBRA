@@ -7,11 +7,17 @@
             <v-card raised class="mb-3">
               <div class="d-flex flex-no-wrap">
                 <v-avatar size="150" tile>
-                  <v-img src="@/assets/apex-icon.png"></v-img>
+                  <v-img src="@/assets/user-logo.png"></v-img>
                 </v-avatar>
                 <div>
-                  <v-card-title class="text-uppercase">Bem vindos à PEBra</v-card-title>
-                  <v-card-text>Estamos aqui para ajudá-lo a iniciar sua vida em exportação!</v-card-text>
+                  <v-card-title class="text-uppercase pb-1">Technology - Slogan your company</v-card-title>
+                  <v-card-text class="text-left">
+                    <p class="mb-1">CNPJ: 12.345.67/0001-01</p>
+                    <v-progress-linear rounded color="green" :height="24" :value="60" class="mb-1">
+                      <div class="font-weight-bold pa-2">60%</div>
+                    </v-progress-linear>
+                    <p class="mb-0">Complete seu perfil agora e desfrute dos benefícios fornecidos pela APEX</p>
+                  </v-card-text>
                 </div>
               </div>
             </v-card>
