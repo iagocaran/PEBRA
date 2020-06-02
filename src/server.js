@@ -19,6 +19,12 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/users", (schema) => {
         return schema.users.all()
       })
+
+      this.post('/users', (schema, request) => {
+        const user = JSON.parse(request.requestBody)
+
+        return schema.users.create(user)
+      })
     },
   })
 
