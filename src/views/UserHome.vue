@@ -130,6 +130,7 @@
       VerticalButton
     },
     data: () => ({
+      dialog: false,
       items: [
         {
           id: 1,
