@@ -1,6 +1,6 @@
 <template>
   <v-card class="text-center pa-6">
-    <v-img class="mb-4" src="@/assets/apex.png"></v-img>
+    <v-img class="mb-4" src="@/assets/pebra.png"></v-img>
     <v-tabs v-model="tab" centered>
       <v-tab>Conectar</v-tab>
       <div style="width: 60px"></div>
@@ -51,36 +51,65 @@
     <v-dialog v-model="termsDialog" max-width="800">
       <terms @close="termsDialog = false"></terms>
     </v-dialog>
+    <v-dialog v-model="registerDialog" max-width="300">
+      <register @close="closeRegister"></register>
+    </v-dialog>
   </v-card>
 </template>
 
 <script>
   import Vue from 'vue'
   import Terms from '@/components/Terms'
+  import Register from '@/components/Register'
 
   export default Vue.extend({
     name: 'Login',
     components: {
-      Terms
+      Terms,
+      Register
     },
     data: () => ({
       tab: 0,
       terms: false,
       termsDialog: false,
+      registerDialog: false,
       email: '',
       emailRules: [
         v => !!v || 'Digite seu e-mail',
         v => /.+@.+/.test(v) || 'O endereço de e-mail precisa ser válido',
       ],
+      password: '',
       passwordRules: [
         v => !!v || 'Digite sua senha'
       ],
       valid: false
     }),
     methods: {
-      close() {
-        this.$emit('close', true);
-        this.$router.push('user');
+      login () {
+        this.$http.post('/users/login', {
+          email: this.email,
+          password: this.password
+        }, { baseURL: '/api' })
+          .then((res) => {
+            this.$emit('close', true);
+            this.$router.push('user');
+          })
+          .catch((err) => { console.log(err) })
+      },
+      register () {
+        this.$http.post('/users', {
+          email: this.email,
+          password: this.password
+        }, { baseURL: '/api' })
+          .then((res) => { this.registerDialog = true })
+          .catch((err) => { console.log(err) })
+      },
+      closeRegister () {
+        this.registerDialog = false
+        this.tab = 0
+        this.email = ''
+        this.password = ''
+        this.terms = false
       }
     }
   })
