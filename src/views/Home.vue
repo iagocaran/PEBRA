@@ -118,7 +118,6 @@
       Login
     },
     data: () => ({
-      users: [],
       dialog: false,
       items: [
         {
@@ -162,13 +161,6 @@
           ]
         }
       ]
-    }),
-    created () {
-      fetch("/api/users")
-      .then((res) => res.json())
-      .then((json) => {
-        this.users = json.users
-      })
-    }
+    })
   })
 </script>
