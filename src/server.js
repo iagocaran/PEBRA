@@ -16,6 +16,13 @@ export function makeServer({ environment = "development" } = {}) {
     routes() {
       this.namespace = "api"
 
+      this.post("/users/login", (schema) => {
+        const now = new Date()
+        const cookieExpiration = new Date(now.getTime() + 24 * 3600 * 1000)
+        document.cookie = `token=${Math.random().toString(36).substr(2)}; domain=localhost; path=/PEBRA; expires=${cookieExpiration.toUTCString()};`
+        return schema.users.find(1)
+      })
+
       this.get("/users", (schema) => {
         return schema.users.all()
       })
@@ -25,6 +32,9 @@ export function makeServer({ environment = "development" } = {}) {
 
         return schema.users.create(user)
       })
+
+      this.namespace = ""
+      this.passthrough()
     },
   })
 
