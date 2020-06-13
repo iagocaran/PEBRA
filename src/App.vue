@@ -21,6 +21,6 @@ export default Vue.extend({
 
 <style scoped>
   .theme--light.v-application {
-    background: #EBEBEB !important;
+    background: #F0F0F0 !important;
   }
 </style>
