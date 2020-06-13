@@ -39,19 +39,7 @@
       <v-container class="pt-0">
         <v-row>
           <v-col offset="1" cols="2">
-            <v-card raised class="mb-2">
-              <div class="text-center">
-                <v-img src="@/assets/user-logo.png" class="text-center"></v-img>
-              </div>
-              <v-card-title class="text-uppercase pb-1">Technology - Slogan your company</v-card-title>
-              <v-card-text class="text-left">
-                <p class="mb-1">CNPJ: 12.345.67/0001-01</p>
-                <v-progress-linear rounded color="green" :height="24" :value="0" class="mb-1">
-                  <div class="font-weight-bold pa-2">0%</div>
-                </v-progress-linear>
-                <p class="mb-0">Complete seu perfil agora e desfrute de nossos benefícios</p>
-              </v-card-text>
-            </v-card>
+            <empty-profile-card></empty-profile-card>
           </v-col>
           <v-col cols="8" class="pa-0">
             <v-row>
@@ -128,10 +116,12 @@
 
 <script lang="ts">
   import Vue from 'vue'
+  import EmptyProfileCard from '@/components/EmptyProfileCard'
 
   export default Vue.extend({
     name: 'Home',
     components: {
+      EmptyProfileCard
     },
     data: () => ({
       dialog: false,
