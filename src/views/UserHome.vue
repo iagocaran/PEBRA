@@ -82,8 +82,8 @@
                     <v-col cols="5">
                       <v-treeview dense :items="items" open-all>
                         <template v-slot:prepend="{ item }">
-                          <v-icon v-if="item.type === 'file'" color="red">mdi-file-pdf</v-icon>
-                          <v-icon v-else-if="item.type === 'link'" color="blue">mdi-open-in-new</v-icon>
+                          <v-icon v-if="item.type === 'file'" :color="item.disabled?'gray':'red'">mdi-file-pdf</v-icon>
+                          <v-icon v-else-if="item.type === 'link'" :color="item.disabled?'gray':'blue'">mdi-open-in-new</v-icon>
                           <v-simple-checkbox color="success" v-model="item.check" v-else></v-simple-checkbox>
                         </template>
                       </v-treeview>
@@ -162,7 +162,8 @@
             {
               id: 6,
               name: 'Análise de Mercado',
-              type: 'file'
+              type: 'file',
+              disabled: true
             }
           ]
         }
