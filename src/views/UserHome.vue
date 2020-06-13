@@ -7,17 +7,8 @@
     >
       <div class="d-flex align-center">
         <v-img
-          alt="APEX Logo"
-          class="shrink mr-2"
-          contain
-          :src="require('@/assets/apex.png')"
-          transition="scale-transition"
-          width="100"
-        />
-
-        <v-img
           alt="PEBra Logo"
-          class="shrink mt-1 hidden-sm-and-down"
+          class="shrink mt-1"
           contain
           min-width="100"
           :src="require('@/assets/pebra.png')"
@@ -55,10 +46,10 @@
               <v-card-title class="text-uppercase pb-1">Technology - Slogan your company</v-card-title>
               <v-card-text class="text-left">
                 <p class="mb-1">CNPJ: 12.345.67/0001-01</p>
-                <v-progress-linear rounded color="green" :height="24" :value="60" class="mb-1">
-                  <div class="font-weight-bold pa-2">60%</div>
+                <v-progress-linear rounded color="green" :height="24" :value="0" class="mb-1">
+                  <div class="font-weight-bold pa-2">0%</div>
                 </v-progress-linear>
-                <p class="mb-0">Complete seu perfil agora e desfrute dos benefícios fornecidos pela APEX</p>
+                <p class="mb-0">Complete seu perfil agora e desfrute de nossos benefícios</p>
               </v-card-text>
             </v-card>
           </v-col>
@@ -126,7 +117,7 @@
 
     <v-footer color="white" elevation="8">
       <v-col class="text-center">
-        2020 - Apex Brasil
+        2020 - PEBra
       </v-col>
     </v-footer>
     <v-dialog v-model="dialog" max-width="400">
