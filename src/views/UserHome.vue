@@ -118,6 +118,8 @@
   import Vue from 'vue'
   import EmptyProfileCard from '@/components/EmptyProfileCard'
 
+  let id = 0;
+
   export default Vue.extend({
     name: 'Home',
     components: {
@@ -127,40 +129,52 @@
       dialog: false,
       items: [
         {
-          id: 1,
-          name: 'Qualifique sua empresa',
+          id: id++,
+          name: 'Complete seu cadastro',
           type: 'topic',
-          check: true
-        }, {
-          id: 2,
-          name: 'Torne-se mais competitivo',
-          type: 'topic',
-          check: true
-        }, {
-          id: 3,
-          name: 'Aproxime-se das tradings',
-          type: 'topic',
-          check: true,
+          check: false,
           children: [
             {
-              id: 7,
+              id: id++,
+              name: 'Editar perfil da empresa',
+              type: 'link'
+            },
+            {
+              id: id++,
+              name: 'Editar contato da empresa',
+              type: 'link'
+            }
+          ]
+        }, {
+          id: id++,
+          name: 'Torne-se mais competitivo',
+          type: 'topic',
+          check: false
+        }, {
+          id: id++,
+          name: 'Aproxime-se das tradings',
+          type: 'topic',
+          check: false,
+          children: [
+            {
+              id: id++,
               name: 'Ver calendário de eventos',
               type: 'link'
             }
           ]
         },{
-          id: 4,
+          id: id++,
           name: 'Participe dos nossos projetos',
           type: 'topic',
           check: false
         },{
-          id: 5,
+          id: id++,
           name: 'Receba estudos exclusivos',
           type: 'topic',
-          check: true,
+          check: false,
           children: [
             {
-              id: 6,
+              id: id++,
               name: 'Análise de Mercado',
               type: 'file',
               disabled: true
