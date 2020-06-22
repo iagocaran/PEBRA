@@ -38,10 +38,10 @@
     <v-content>
       <v-container class="pt-0">
         <v-row>
-          <v-col offset="1" cols="2">
+          <v-col offset-xl="1" xl="2" offset="0" cols="3">
             <empty-profile-card></empty-profile-card>
           </v-col>
-          <v-col cols="8" class="pa-0">
+          <v-col xl="8" cols="9" class="pa-0">
             <v-row>
               <v-col cols="12" class="pb-0">
                 <v-bottom-navigation>
