@@ -4,16 +4,21 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-  const routes: Array<RouteConfig> = [
+const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
+  }, {
     path: '/user',
     name: 'UserHome',
+    meta: { requiresAuth: true },
     component: () => import(/* webpackChunkName: "user" */ '../views/UserHome.vue')
+  }, {
+    path: '/user/first',
+    name: 'FirstLogin',
+    meta: { requiresAuth: true },
+    component: () => import(/* webpackChunkName: "first" */ '../views/FirstLogin.vue')
   }
 ]
 
