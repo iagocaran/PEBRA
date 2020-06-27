@@ -1,4 +1,4 @@
-import { Server, Model } from "miragejs"
+import { Server, Model, Response } from "miragejs"
 
 export function makeServer({ environment = "development" } = {}) {
   const server = new Server({
@@ -29,9 +29,13 @@ export function makeServer({ environment = "development" } = {}) {
       })
 
       this.get("/users/me", (schema) => {
-        const token = document.cookie.split('; ').map((i) => i.split('=')).find((i) => i[0] === 'token')[1]
-        const user = schema.users.where({ token }).models[0]
-        return { email: user.email }
+        try {
+          const token = document.cookie.split('; ').map((i) => i.split('=')).find((i) => i[0] === 'token')[1]
+          const user = schema.users.where({ token }).models[0]
+          return { email: user.email }
+        } catch (err) {
+          return new Response(401, {}, { errors: ["Not Authenticated"] })
+        }
       })
 
       this.get("/users", (schema) => {
