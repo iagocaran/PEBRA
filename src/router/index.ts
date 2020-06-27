@@ -28,4 +28,22 @@ const router = new VueRouter({
   routes
 })
 
+function authenticated () {
+  return document.cookie.search('token') >= 0;
+}
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!authenticated()) {
+      next({
+        path: '/'
+      })
+    } else {
+      next()
+    }
+  } else {
+    next();
+  }
+})
+
 export default router
