@@ -90,9 +90,11 @@
           email: this.email,
           password: this.password
         }, { baseURL: '/api' })
-          .then((res) => {
-            this.$emit('close', true);
-            this.$router.push('user');
+          .then(() => {
+            this.$store.dispatch('updateUserData').then(() => {
+              this.$emit('close', true);
+              this.$router.push('user');
+            })
           })
           .catch((err) => { console.log(err) })
       },
