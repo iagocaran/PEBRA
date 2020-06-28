@@ -11,13 +11,14 @@
               <p>
                 Para te colocar no caminho certo, precisamos de apenas três informações:
               </p>
-              <v-form>
+              <v-form v-model="valid">
                 <v-text-field
                   label="Nome da Empresa"
                   name="company"
                   v-model="data.company"
                   prepend-icon="mdi-office-building"
                   type="text"
+                  :rules="companyRules"
                 ></v-text-field>
                 <v-text-field
                   label="CNPJ"
@@ -25,6 +26,7 @@
                   v-model="data.document"
                   prepend-icon="mdi-card-text"
                   type="text"
+                  :rules="cnpjRules"
                 ></v-text-field>
                 <v-autocomplete
                   label="Selecione alguns de seus produtos"
@@ -33,7 +35,7 @@
                   v-model="data.products"
                   multiple
                 ></v-autocomplete>
-                <v-btn color="primary">Continuar</v-btn>
+                <v-btn color="primary" @click="save" :disabled="!valid">Continuar</v-btn>
               </v-form>
             </v-card-text>
           </v-card>
@@ -75,10 +77,32 @@
           { text: 'Aguardente', value: '22072020' }
         ],
         data: {
-          products: {},
+          products: [],
           document: '',
           company: ''
-        }
+        },
+        valid: false,
+        companyRules: [
+          v => !!v || 'Digite o nome da empresa'
+        ],
+        cnpjRules: [
+          v => !!v || 'Digite seu CNPJ',
+          v => /[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}-?[0-9]{2}/.test(v) || 'O CNPJ precisa ser válido',
+        ]
+      }
+    },
+    methods: {
+      save () {
+        this.$http.patch('/users/' + this.$store.getters.getUser.id,
+          Object.assign(this.data, { firstAccess: true }),
+          { baseURL: '/api' })
+          .then(() => {
+            this.$store.dispatch('updateUserData').then(() => {
+              console.log('2')
+              this.$router.push({ name: 'user' });
+            })
+          })
+          .catch((err) => { console.log(err) })
       }
     }
   })
