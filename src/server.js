@@ -32,20 +32,24 @@ export function makeServer({ environment = "development" } = {}) {
         try {
           const token = document.cookie.split('; ').map((i) => i.split('=')).find((i) => i[0] === 'token')[1]
           const user = schema.users.where({ token }).models[0]
-          return { email: user.email }
+          return { user }
         } catch (err) {
           return new Response(401, {}, { errors: ["Not Authenticated"] })
         }
       })
 
-      this.get("/users", (schema) => {
-        return schema.users.all()
-      })
-
+      this.get('/users')
+      this.get('/users/:id')
       this.post('/users', (schema, request) => {
         const user = JSON.parse(request.requestBody)
 
         return schema.users.create(user)
+      })
+      this.patch('/users/:id', (schema, request) => {
+        const id = request.params.id
+        const attrs = JSON.parse(request.requestBody)
+
+        return schema.users.find(id).update(attrs)
       })
 
       this.namespace = ""
