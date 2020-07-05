@@ -4,18 +4,9 @@
 
 <script>
 import Vue from 'vue';
-// import Login from '@/components/Login'
 
 export default Vue.extend({
-  name: 'App',
-
-  components: {
-      // Login
-  },
-
-  data: () => ({
-    dialog: false
-  }),
+  name: 'App'
 });
 </script>
 
