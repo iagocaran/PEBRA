@@ -13,26 +13,44 @@
       <v-spacer></v-spacer>
 
 <!-- TODO: Configure viewport -->
-      <v-btn text>Início</v-btn>
-      <v-btn text>Benefícios</v-btn>
-      <v-btn text>Recursos</v-btn>
-      <v-btn text>Clientes</v-btn>
-      <v-btn text>Contato</v-btn>
-      <v-btn outlined rounded style="border-color: #28a745; border-width: 3px;">Acessar</v-btn>
+      <v-btn
+        @click="$vuetify.goTo('#inicio', { duration: 500, easing: 'easeInOutCubic' })"
+        :class=" { active : section === 'inicio' }"
+        text>Início</v-btn>
+      <v-btn
+        @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })"
+        :class=" { active : section === 'beneficios' }"
+        text>Benefícios</v-btn>
+      <v-btn
+        @click="$vuetify.goTo('#recursos', { duration: 500, easing: 'easeInOutCubic' })"
+        :class=" { active : section === 'recursos' }"
+        text>Recursos</v-btn>
+      <v-btn
+        @click="$vuetify.goTo('#clientes', { duration: 500, easing: 'easeInOutCubic' })"
+        :class=" { active : section === 'clientes' }"
+        text>Clientes</v-btn>
+      <v-btn
+        @click="$vuetify.goTo('#contato', { duration: 500, easing: 'easeInOutCubic' })"
+        :class=" { active : section === 'contato' }"
+        text>Contato</v-btn>
+      <v-btn outlined rounded @click="dialog = true" style="border-color: #28a745; border-width: 3px;">Acessar</v-btn>
       <v-app-bar-nav-icon v-if="false"></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-content class="pt-0" style="background-color:#e9ecef">
+      <a id="inicio" v-intersect.quiet="setSection"></a>
       <div class="landing fixed-background" :style="{ backgroundImage: 'url(' + require('@/assets/home/porto.png') + ')' }">
         <div class="caption text-center">
           <h1>Bem vindo à PEBra</h1>
           <h3>Porque exportar é para todos</h3>
-          <v-btn x-large outlined tile dark style="border-width: 3px;font-family: 'Lato', sans-serif;">Começar!</v-btn>
+          <v-btn x-large outlined tile dark style="border-width: 3px;font-family: 'Lato', sans-serif;"
+                 @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })">Começar!</v-btn>
         </div>
       </div>
 
       <v-container class="pt-12" style="max-width: 75%; padding-bottom:96px; color:rgb(80, 89, 98);">
         <div class="text-center heading mt-12 mb-12">
+          <a id="beneficios" v-intersect.quiet="setSection"></a>
           <h1>Benefícios</h1>
         </div>
         <v-row pb-12>
@@ -67,6 +85,7 @@
         <div class="layer">
         </div>
         <div class="text-center heading mt-12 mb-12">
+          <a id="recursos" v-intersect.quiet="setSection"></a>
           <h1 style="color: white">Recursos</h1>
         </div>
         <v-row style="fontSize:1.25rem">
@@ -90,6 +109,7 @@
 
       <v-container class="pt-12" style="padding-bottom:96px; color:rgb(80, 89, 98);">
         <div class="text-center heading mt-12 mb-12">
+          <a id="clientes" v-intersect.quiet="setSection"></a>
           <h1>Clientes</h1>
         </div>
         <v-row pb-12>
@@ -140,7 +160,7 @@
 
       <v-container fluid class="text-center py-12" style="background-color:#FFF; color:rgb(80, 89, 98);">
         <p class="mb-10" style="font-size: 1.25rem">Quer saber mais?</p>
-        <v-btn x-large class="text-uppercase btn-secondary mb-4">Acesse a nossa plataforma</v-btn>
+        <v-btn x-large @click="dialog = true" class="text-uppercase btn-secondary mb-4">Acesse a nossa plataforma</v-btn>
       </v-container>
     </v-content>
 
@@ -157,6 +177,7 @@
               />
             </div>
             <p>Caso tenha dúvidas ou sugestões de como podemos melhorar nosso serviço, não evite de nos contactar</p>
+            <a id="contato" v-intersect.quiet="setSection"></a>
             <strong>Contato</strong>
             <p>(+55) 61 3314-1414<br>contato@pebra.com.br</p>
             <a href="" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -192,8 +213,15 @@
       Login
     },
     data: () => ({
-      dialog: false
-    })
+      dialog: false,
+      section: 'inicio'
+    }),
+    methods: {
+      setSection (entries, observer, isIntersecting) {
+        if (isIntersecting)
+          this.section = entries[0].target.id
+      }
+    }
   })
 </script>
 
@@ -213,10 +241,13 @@
   }
 
   .v-app-bar .v-btn {
-
     font-weight: 700 !important;
     font-size: .9rem !important;
     font-family: 'Lato Semibold', sans-serif !important;
+  }
+
+  .v-app-bar .v-btn.active {
+    color: #00A000;
   }
 
   .landing {
