@@ -98,8 +98,7 @@
           { baseURL: '/api' })
           .then(() => {
             this.$store.dispatch('updateUserData').then(() => {
-              console.log('2')
-              this.$router.push({ name: 'user' });
+              this.$router.push({ name: 'UserHome' });
             })
           })
           .catch((err) => { console.log(err) })
