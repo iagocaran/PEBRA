@@ -1,5 +1,5 @@
 module.exports = {
-  "publicPath": "/PEBRA/",
+  "publicPath": "/",
   "transpileDependencies": [
     "vuetify"
   ]
