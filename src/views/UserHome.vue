@@ -116,7 +116,7 @@
 
 <script lang="ts">
   import Vue from 'vue'
-  import EmptyProfileCard from '@/components/EmptyProfileCard'
+  import EmptyProfileCard from '@/components/EmptyProfileCard.vue'
 
   let id = 0;
 
