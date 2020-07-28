@@ -38,21 +38,12 @@ const router = new VueRouter({
   routes
 })
 
-async function authenticated () {
-  const token = document.cookie.search('token');
-  if (Object.keys(store.getters.getUser).length === 0)
-    await store.dispatch('updateUserData')
-  return token >= 0;
-}
-
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (!authenticated()) {
-      next({
-        path: '/'
-      })
-    } else {
+    if (store.getters.getUser) {
       next()
+    } else {
+      next({ path: '/' })
     }
   } else {
     next();

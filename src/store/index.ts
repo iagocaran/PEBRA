@@ -1,35 +1,34 @@
 import Vue from 'vue'
-import http from 'axios'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: {}
+    user: -1,
+    users: [
+      { name: "Bob", email: "bob@mail.com", password: "1234" },
+      { name: "Alice", email: "a@a", password: "a"}
+    ]
   },
   mutations: {
     updateUser (state, user) {
-      state.user = user
+      Object.assign(state.users[state.user], user)
+    },
+    createUser (state, user) {
+      state.users.push(user)
+    },
+    login (state, credentials) {
+      state.user = state.users.findIndex(e => e.email == credentials.email && e.password == credentials.password)
+      return state.user >= 0
     }
   },
   actions: {
-    updateUserData ({ commit }) {
-      return new Promise((resolve) => {
-        http.get('/users/me', { baseURL: '/api' })
-          .then((res) => {
-            commit('updateUser', res.data.user)
-          })
-          .catch((err) => { console.log(err) })
-          .finally(() => {
-            resolve()
-          })
-      })
-    }
+
   },
   getters: {
     getUser (state) {
-      return state.user
+      return state.user >= 0 ? state.users[state.user] : null
     }
   },
   modules: {

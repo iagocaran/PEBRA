@@ -86,25 +86,22 @@
     }),
     methods: {
       login () {
-        this.$http.post('/users/login', {
+        this.$store.commit('login', {
           email: this.email,
           password: this.password
-        }, { baseURL: '/api' })
-          .then(() => {
-            this.$store.dispatch('updateUserData').then(() => {
-              this.$emit('close', true);
-              this.$router.push('user');
-            })
-          })
-          .catch((err) => { console.log(err) })
+        })
+        if (this.$store.getters.getUser) {
+          this.$emit('close', true);
+          this.$router.push('user');
+        } else {
+          alert('Bad credentials')
+        }
       },
       register () {
-        this.$http.post('/users', {
+        this.$store.commit('createUser', {
           email: this.email,
           password: this.password
-        }, { baseURL: '/api' })
-          .then((res) => { this.registerDialog = true })
-          .catch((err) => { console.log(err) })
+        })
       },
       closeRegister () {
         this.registerDialog = false

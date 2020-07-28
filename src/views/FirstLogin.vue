@@ -93,15 +93,8 @@
     },
     methods: {
       save () {
-        this.$http.patch('/users/' + this.$store.getters.getUser.id,
-          Object.assign(this.data, { firstAccess: true }),
-          { baseURL: '/api' })
-          .then(() => {
-            this.$store.dispatch('updateUserData').then(() => {
-              this.$router.push({ name: 'UserHome' });
-            })
-          })
-          .catch((err) => { console.log(err) })
+        this.$store.commit('updateUser', Object.assign(this.data, { firstAccess: true }))
+        this.$router.push({ name: 'UserHome' })
       }
     }
   })
