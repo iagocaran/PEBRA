@@ -12,19 +12,18 @@
 
       <v-spacer></v-spacer>
 
-<!-- TODO: Configure viewport -->
       <v-btn
         @click="$vuetify.goTo('#inicio', { duration: 500, easing: 'easeInOutCubic' })"
         :class=" { active : section === 'inicio' }"
-        text>Início</v-btn>
-      <v-btn
-        @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })"
-        :class=" { active : section === 'beneficios' }"
-        text>Benefícios</v-btn>
+      text>Início</v-btn>
       <v-btn
         @click="$vuetify.goTo('#recursos', { duration: 500, easing: 'easeInOutCubic' })"
         :class=" { active : section === 'recursos' }"
         text>Recursos</v-btn>
+      <v-btn
+        @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })"
+        :class=" { active : section === 'beneficios' }"
+        text>Benefícios</v-btn>
       <v-btn
         @click="$vuetify.goTo('#clientes', { duration: 500, easing: 'easeInOutCubic' })"
         :class=" { active : section === 'clientes' }"
@@ -42,7 +41,7 @@
       <div class="landing fixed-background" :style="{ backgroundImage: 'url(' + require('@/assets/home/porto.png') + ')' }">
         <div class="caption text-center">
           <h1>Bem vindo à PEBra</h1>
-          <h3>Porque exportar é para todos</h3>
+          <h3>O lugar perfeito para a começar a exportar</h3>
           <v-btn x-large outlined tile dark style="border-width: 3px;font-family: 'Lato', sans-serif;"
                  @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })">Começar!</v-btn>
         </div>
@@ -50,24 +49,24 @@
 
       <v-container class="pt-12" style="max-width: 75%; padding-bottom:96px; color:rgb(80, 89, 98);">
         <div class="text-center heading mt-12 mb-12">
-          <a id="beneficios" v-intersect.quiet="setSection"></a>
-          <h1>Benefícios</h1>
+          <a id="recursos" v-intersect.quiet="setSection"></a>
+          <h1>Principais Recursos</h1>
         </div>
         <v-row pb-12>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-clock</v-icon>
-            <h3 class="mb-5">Tempo</h3>
-            <p>Você ganha tempo ao achar a informação diretamente, sem precisar procurar em diversos locais</p>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-routes</v-icon>
+            <h3 class="mb-5">Meu Caminho Exportador</h3>
+            <p>Tenha um acompanhamento personalizado ao longo da sua trajetória na realização das exportações e aprenda como realizar o passo a passo.</p>
           </v-col>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-format-list-checkbox</v-icon>
-            <h3 class="mb-5">Autonomia</h3>
-            <p>Com o <b>Meu Caminho Exportador</b>, você consegue caminhar por conta própria e agilizar o seu processo</p>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-handshake</v-icon>
+            <h3 class="mb-5">Consórcio de Exportação</h3>
+            <p>Participe de grupos que tenham o mesmo objetivo e dividam custos de transporte ou realizem parceirias para a realização da exportação.</p>
           </v-col>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00a000">mdi-file-document-edit-outline</v-icon>
-            <h3 class="mb-5">Experiência</h3>
-            <p>Analisando suas necessidades, podemos preparar exatamente o que você precisa.</p>
+            <v-icon size="50" class="mb-5" style="color:#00a000">mdi-newspaper</v-icon>
+            <h3 class="mb-5">Análises de Mercado</h3>
+            <p>Tenha acesso à documentos de análise de mercado de diferentes fontes, informações sobre carga tributária e leis aduaneiros de acordo com os blocos economicos e países</p>
           </v-col>
         </v-row>
       </v-container>
@@ -85,24 +84,24 @@
         <div class="layer">
         </div>
         <div class="text-center heading mt-12 mb-12">
-          <a id="recursos" v-intersect.quiet="setSection"></a>
-          <h1 style="color: white">Recursos</h1>
+          <a id="beneficios" v-intersect.quiet="setSection"></a>
+          <h1 style="color: white">Benefícios</h1>
         </div>
         <v-row style="fontSize:1.25rem">
           <v-col class="text-center">
-            <h2 class="mb-5">Caminho Exportador</h2>
+            <h2 class="mb-5">Meu Caminho Exportador</h2>
             <v-icon size="50" class="mb-5" style="color:#00A000">mdi-routes</v-icon>
-            <p>Te ajuda e te guia no processo de exportação. Você consegue caminhar no seu próprio ritmo e sem depender de terceiros.</p>
+            <p>Ganhe tempo com ferramentas que auxiliam no preenchimento de documentos de exportação, dados explicados sem a necessidade de pesquisar e transparência nas operações realizadas na plataforma.</p>
           </v-col>
           <v-col class="text-center">
             <h2 class="mb-5">Consórcio de Exportação</h2>
             <v-icon size="50" class="mb-5" style="color:#00A000">mdi-handshake</v-icon>
-            <p>Você consegue montar grupos que conseguem atender à demanda do cliente, mesmo que sua produção seja baixa</p>
+            <p>Realize os processos de exportação no seu próprio ritmo e sem a dependência de terceiros</p>
           </v-col>
           <v-col class="text-center">
-            <h2 class="mb-5">Análises de Mercado</h2>
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-chart-line</v-icon>
-            <p>Fornecemos o que você precisa: Melhores países para seu produto e qual melhor momento de aumentar sua produção.</p>
+            <h2 class="mb-5">Conteúdos</h2>
+              <v-icon size="50" class="mb-5" style="color:#00A000">mdi-newspaper</v-icon>
+            <p>Informações relevantes e focadas de acordo com o seu perfil e produtos cadastrados.</p>
           </v-col>
         </v-row>
       </v-container>
