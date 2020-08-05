@@ -77,6 +77,20 @@
                 '<p>Praesent tincidunt enim neque, dictum elementum odio suscipit in. Phasellus commodo placerat augue, eget bibendum diam lacinia tempor. Fusce convallis elit ac aliquam semper. Sed laoreet tincidunt urna. Cras lectus quam, sagittis molestie leo at, lacinia sagittis sapien. Nulla eget efficitur lacus. Phasellus ornare metus eget ligula mattis, sed elementum orci malesuada. </p>'
             }, {
               id: id++,
+              name: 'Acessando a aba de consórcios de exportação',
+              type: 'topic',
+              check: true,
+              content: '<p>Nesta aba você encontrará uma das ferramentas mais importantes da nossa plataforma, os consórcios de exportação ou de transporte. Antes de apresentar como se cadastrar em um consórcio e como utilizá-la da melhor maneira, vamos explicar rapidamente a nossa ideia de consórcio (relacionado com a nossa aplicação), como são divididos.</p>' +
+                '<h3>O que é um consórcio?</h3>' +
+                '<p>É um sistema de match de empresas que buscam um mesmo objetivo e se unem para diminuir custos, compartilhar informações e cooperarem em operações seja na área de transportes ou para realizar uma exportação.</p>' +
+                '<h3>Como são divididos?</h3>' +
+                '<p>Atualmente, nós temos dois tipos de consórcios: de transporte ou de exportação. No consórcio de transporte, empresas se juntam para compartilhar custos de fretes para serem levados à destinos finais ou intermediários como portos ou aeroportos, através dos meios de transporte disponíveis (rodoviário, ferroviário, aéreo).</p>' +
+                '<p>No consórcio de exportador, empresas se juntam para atingir um volume de exportação demandada por um exportador ou para dividir custos com relação aos pagamentos realizados em uma primeira exportação.</p>' +
+                '<h3>Como participar de um consórcio?</h3>' +
+                '<p>Na primeira seção, o usuário deve possuir um endereço cadastrado para que um programa de pesquisa de consórcios da região ou estado sejam apresentados para ele. Após a escolha do tipo de consórcio, uma lista de consórcios é fornecida apresentando o nome do consórcio, uma breve descrição do grupo, a localização média com as empresas, quantidade de membros e status do grupo. Nesta parte, o usuário tem a opção de solicitar a participação em algum consórcio ou criar um caso nenhum seja vantajoso.</p>' +
+                '<p>Ao ser membro de um consórcio, o usuário tem acesso a todos os membros do grupo e suas informações (contato dos responsáveis, endereço) e várias ferramentas para que os membros do consórcio possam se organizar entre eles, tais como notificações de ações e ofertas a serem compartilhadas/discutidas</p>'
+            }, {
+              id: id++,
               name: 'Cadastro no portal SISCOMEX',
               type: 'topic',
               check: true
@@ -97,22 +111,44 @@
               id: id++,
               name: 'Adicionar suas categorias de produtos',
               type: 'topic',
-              check: true
+              check: true,
+              content: '<p>Para que possamos apresentar uma experiência compartilhada para nossos usuários, é preciso informar todos os produtos que você tem interesse em exportar ou gostaria de saber mais. \tTodos os produtos apresentam um código NCM (Nomenclatura Comum ao Mercosul) e através deste código, forneceremos notícias, eventos e facilitaremos seu percurso na realização da primeira exportação.</p>' +
+                '<p>Para cadastrar os produtos, basta você ir na aba “Meu Negócio” e, no cartão “meus produtos” você terá o botão “adicionar novo produto”. Após, você digitará o produto que deseja e verificar em qual produto ele se encaixa na nossa lista. Ainda tem dúvidas? Entre em contato conosco através do chat ou pelo email relacionamento@pebra.com.br</p>'
             }, {
               id: id++,
               name: 'Cadastrar um responsável',
               type: 'topic',
-              check: true
+              check: true,
+              content: '<h3>Por que é necessário adicionar um responsável?</h3>' +
+                '<p>Porque nós precisamos ter a certeza de que todos os nossos usuários estejam buscando na plataforma uma maneira para começar a exportar ou aumentar suas exportações. Então, precisamos verificar todos os usuários de forma que tenhamos certeza de que todas as transações ou ofertas sejam realizadas por pessoas que estão com o mesmo objetivo: de realizar uma exportação.</p>' +
+                '<h3>O que eu ganho se eu tiver um responsável?</h3>' +
+                '<p>Com um responsável cadastrado, você pode aceitar ofertas na área de análises, receber informações relevantes em tempo real e participar de consórcios de exportações.</p>' +
+                '<h3>Certo, e como eu faço para colocar um responsável?</h3>' +
+                '<p>É algo simples, na aba “Meu negócio” você terá um cartão sobre “Meus responsáveis”, clicando no botão “adicionar responsável”, é necessário apresentar as seguintes informações:</p>' +
+                '<ul><li>Nome completo</li>' +
+                '<li>CPF</li>' +
+                '<li>Documento com foto</li>' +
+                '<li>Telefone</li>' +
+                '<li>Vínculo do responsável com a empresa</li></ul>' +
+                '<p>Após essas informações, nós iremos averiguar as informações nas próximas 48 horas e cadastrar a empresa como “empresa verificada“ para que você possa ter acesso às ferramentas antes bloqueadas.\n</p>'
             }, {
               id: id++,
               name: 'Registrar a localização da empresa',
               type: 'topic',
-              check: true
+              check: true,
+              contact: '<h3>Por que é necessário informar o endereço?</h3>' +
+                '<p>Informando o endereço nos ajuda a oferecer eventos da sua região, apresentar notícias relevantes não somente em nível nacional, mas também de acordo com o seu estado, região e cidade. Além disso, você poderá encontrar consórcios de exportações perto de você que podem ser de grande ajuda na hora de realizar a sua primeira exportação.</p>' +
+                '<h3>Como adicionar o endereço?</h3>' +
+                '<p>Acessando a aba “Meu negócio” você terá um cartão sobre “Meu endereço”, clicando no botão “atualizar endereço”, você colocará seu endereço no local indicado e, depois, você clicará no botão “alterar”.</p>'
             }, {
               id: id++,
               name: 'Indicar o tipo e tamanho da empresa',
               type: 'topic',
-              check: true
+              check: true,
+              content: '<h3>Por que é necessário informar o tamanho da empresa?</h3>' +
+                '<p>No pagamentos de impostos dos produtos, o governo cobra tarifas diferentes de acordo com o tamanho da empresas. Nesse quesito, podemos fornecer documentos com cálculos já realizados para a sua situação sem precisar procurar informações e fazer cálculos.</p>' +
+                '<h3>Como adicionar o tamanho?</h3>' +
+                '<p>Acessando a aba “Meu negócio” você terá um cartão sobre “Tamanho da empresa”, clicando no botão “atualizar tamanho”, você marcará o tipo de empresa na qual você se encaixa.</p>'
             }
           ]
         }, {
@@ -144,7 +180,13 @@
               id: id++,
               name: 'Como verificar quais são meus concorrentes?',
               type: 'topic',
-              check: false
+              check: false,
+              content: '<p>Olá pessoal, neste tópico vamos discutir um pouco sobre como realizar uma pesquisa de mercado de acordo com os produtos que você está interessado. O portal de exportação do governo disponibiliza todos as empresas que exportam para outros países através do portal SISCOMEX. Nele, você tem informações referentes a cada ano com muitos dados que podem ser úteis.</p>' +
+                '<p>Num primeiro momento, nós vos convidamos para acessar o portal através do link: <a href="http://www.mdic.gov.br/index.php/comercio-exterior/estatisticas-de-comercio-exterior/empresas-brasileiras-exportadoras-e-importadoras">http://www.mdic.gov.br/index.php/comercio-exterior/estatisticas-de-comercio-exterior/empresas-brasileiras-exportadoras-e-importadoras</a> ou procurando em um motor de busca (Google, Yahoo) com o texto “banco de dados siscomex”.</p>' +
+                '<img src="' + require('@/assets/topics/concorrentes01.png') + '" style="width:100%"></img>' +
+                '<p>Na parte “Cadastro de empresas exportadoras/importadoras 20XX” estão dispostos arquivos que podem ser abertos como uma planilha em que você encontrará o nomes das empresas que exportam de acordo com o ano solicitado.</p>' +
+                '<img src="' + require('@/assets/topics/concorrentes02.png') + '" style="width:100%"></img>' +
+                '<p>Sendo assim, você pode realizar uma análise de mercado, verificar seus possíveis concorrentes e, após, verificar se eles já exportam os mesmo produtos que você de modo a pensar em como funciona a cadeia de produção até a exportação e como pode-se melhorar e oferecer algo diferenciado do concorrente.</p>'
             }, {
               id: id++,
               name: 'Aprendendo a verificar as leis internacionais',
