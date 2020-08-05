@@ -5,7 +5,7 @@
         <v-img
           alt="PEBra Logo"
           contain
-          :src="require('@/assets/home/PEBraLogo.png')"
+          :src="require('@/assets/home/pebra-white.png')"
           width="140"
         />
       </v-toolbar-title>
