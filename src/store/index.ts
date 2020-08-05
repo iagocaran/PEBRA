@@ -5,10 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: -1,
+    user: 1,
     users: [
       { name: "Bob", email: "bob@mail.com", password: "1234" },
-      { name: "Alice", email: "a@a", password: "a"}
+      { name: "Alice", email: "contato@alua.com", password: "senha123", company: 'Apiário Lua', firstAccess: true }
     ]
   },
   mutations: {
