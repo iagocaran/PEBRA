@@ -54,19 +54,19 @@
         </div>
         <v-row pb-12>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-routes</v-icon>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-train</v-icon>
             <h3 class="mb-5">Meu Caminho Exportador</h3>
-            <p>Tenha um acompanhamento personalizado ao longo da sua trajetória na realização das exportações e aprenda como realizar o passo a passo.</p>
+            <p>Tenha uma orientação personalizada ao longo da sua trajetória e aprenda como realiza-los passo a passo.</p>
           </v-col>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-handshake</v-icon>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-account-group</v-icon>
             <h3 class="mb-5">Consórcio de Exportação</h3>
-            <p>Participe de grupos que tenham o mesmo objetivo e dividam custos de transporte ou realizem parceirias para a realização da exportação.</p>
+            <p>Participe de grupos, divida custos de transporte e realize parceirias  para complementar volumes.</p>
           </v-col>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00a000">mdi-newspaper</v-icon>
+            <v-icon size="50" class="mb-5" style="color:#00a000">mdi-chart-line</v-icon>
             <h3 class="mb-5">Análises de Mercado</h3>
-            <p>Tenha acesso à documentos de análise de mercado de diferentes fontes, informações sobre carga tributária e leis aduaneiros de acordo com os blocos economicos e países</p>
+            <p>Acesso ao que você precisa: informações de profissionais, modificação de leis e indicação dos melhores países para mandar seu produto.</p>
           </v-col>
         </v-row>
       </v-container>
@@ -89,14 +89,14 @@
         </div>
         <v-row style="fontSize:1.25rem">
           <v-col class="text-center">
-            <h2 class="mb-5">Meu Caminho Exportador</h2>
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-routes</v-icon>
-            <p>Ganhe tempo com ferramentas que auxiliam no preenchimento de documentos de exportação, dados explicados sem a necessidade de pesquisar e transparência nas operações realizadas na plataforma.</p>
+            <h2 class="mb-5">Tempo</h2>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-clock</v-icon>
+            <p>Ganhe tempo com ferramentas que auxiliam com os documentos de exportação, preenchimento automático e explicações simples.</p>
           </v-col>
           <v-col class="text-center">
-            <h2 class="mb-5">Consórcio de Exportação</h2>
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-handshake</v-icon>
-            <p>Realize os processos de exportação no seu próprio ritmo e sem a dependência de terceiros</p>
+            <h2 class="mb-5">Autonomia</h2>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-format-list-checkbox</v-icon>
+            <p>Realize os processos de exportação no seu próprio ritmo e sem a dependência de terceiros.</p>
           </v-col>
           <v-col class="text-center">
             <h2 class="mb-5">Conteúdos</h2>
