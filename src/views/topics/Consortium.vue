@@ -16,8 +16,8 @@
         </v-list-item-action>
       </v-list-item>
       <v-list-item>
-        <v-tabs v-model="tab">
-          <v-tab><v-icon class="mr-2">mdi-handshake</v-icon>Meu Consórcios</v-tab>
+        <v-tabs v-model="tab" grow>
+          <v-tab><v-icon class="mr-2">mdi-handshake</v-icon>Meus Consórcios</v-tab>
           <v-tab><v-icon class="mr-2">mdi-airplane-takeoff</v-icon>Consórcios de Exportação</v-tab>
           <v-tab><v-icon class="mr-2">mdi-truck-fast</v-icon>Consórcios de Transporte</v-tab>
         </v-tabs>
@@ -37,6 +37,23 @@
               <div class="caption mb-2">50km</div>
               <v-list-item-subtitle class="mb-3">
                 Grupo de produtores da região de Jaguariti para compartilhamento de cargas
+              </v-list-item-subtitle>
+              <v-btn color="primary">Ver notificações</v-btn>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
+        <v-card raised class="mb-2">
+          <v-list-item three-line>
+            <div class="mr-5">
+              <v-icon size="50">mdi-airplane-takeoff</v-icon>
+            </div>
+            <v-list-item-content class="d-block">
+              <v-list-item-title class="headline mb-0">
+                Apicultores do Nordeste
+              </v-list-item-title>
+              <div class="caption mb-2">325km</div>
+              <v-list-item-subtitle class="mb-3">
+                Produtores de mel da região Nordeste
               </v-list-item-subtitle>
               <v-btn color="primary">Ver notificações</v-btn>
             </v-list-item-content>
@@ -68,11 +85,11 @@
             </div>
             <v-list-item-content class="d-block">
               <v-list-item-title class="headline mb-0">
-                Consórcio do pico da Jaguatiri
+                Vinhos em Curitiba e região
               </v-list-item-title>
               <div class="caption mb-2">50km</div>
               <v-list-item-subtitle class="mb-3">
-                Grupo de produtores têxtis da região de Jaguatiri, compartilhamos cargas de caminhão, raramente de trem e containers.
+                Conglomerado vinicultor exportador
               </v-list-item-subtitle>
               <v-btn color="primary" text class="pa-0" disabled>Não aceita mais membros</v-btn>
             </v-list-item-content>
@@ -138,11 +155,11 @@
             </div>
             <v-list-item-content class="d-block">
               <v-list-item-title class="headline mb-0">
-                Associação das indústrias de Itu
+                Triangulo Mineiro de compartilhamento de cagas
               </v-list-item-title>
               <div class="caption mb-2">10km</div>
               <v-list-item-subtitle class="mb-3">
-                Associação com o objetivo de compartilhar containers de <trem></trem>
+                Grupo de empresas para o fretamento por caminhões
               </v-list-item-subtitle>
               <v-btn color="primary" text class="pa-0" disbaled>Não aceita mais membros</v-btn>
             </v-list-item-content>
@@ -164,3 +181,4 @@
     methods: {}
   })
 </script>
+

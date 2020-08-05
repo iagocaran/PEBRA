@@ -45,11 +45,11 @@
                     <span>Noticias</span>
                     <v-icon>mdi-newspaper</v-icon>
                   </v-btn>
-                  <v-btn disabled>
+                  <v-btn disabled style="background: transparent !important;">
                     <span>Eventos</span>
                     <v-icon>mdi-calendar</v-icon>
                   </v-btn>
-                  <v-btn disabled>
+                  <v-btn disabled style="background: transparent !important;">
                     <span>Análises</span>
                     <v-icon>mdi-chart-line</v-icon>
                   </v-btn>
@@ -57,7 +57,7 @@
                     <span>Consórcio</span>
                     <v-icon>mdi-account-group</v-icon>
                   </v-btn>
-                  <v-btn disabled>
+                  <v-btn disabled style="background: transparent !important;">
                     <span>Meu negócio</span>
                     <v-icon>mdi-account</v-icon>
                   </v-btn>
@@ -89,3 +89,6 @@
     data: () => ({}),
   })
 </script>
+
+<style scoped>
+</style>
