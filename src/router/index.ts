@@ -23,7 +23,18 @@ const routes: Array<RouteConfig> = [
     //     })
     //   }
     // },
-    component: () => import(/* webpackChunkName: "user" */ '../views/UserHome.vue')
+    component: () => import('../views/UserHome.vue'),
+    redirect: '/user/home',
+    children: [{
+      path: 'home',
+      component: () => import('../views/topics/MyWay.vue')
+    }, {
+      path: 'news',
+      component: () => import('../views/topics/News.vue')
+    }, {
+      path: 'consortium',
+      component: () => import('../views/topics/Consortium.vue')
+    }]
   }, {
     path: '/user/first',
     name: 'FirstLogin',
