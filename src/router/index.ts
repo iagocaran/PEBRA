@@ -13,21 +13,22 @@ const routes: Array<RouteConfig> = [
   }, {
     path: '/user',
     name: 'UserHome',
-    meta: { requiresAuth: true },
-    beforeEnter: (to, from, next) => {
-      if (store.getters.getUser.firstAccess) {
-        next()
-      } else {
-        next({
-          path: '/user/first'
-        })
-      }
-    },
+    // meta: { requiresAuth: true },
+    // beforeEnter: (to, from, next) => {
+    //   if (store.getters.getUser.firstAccess) {
+    //     next()
+    //   } else {
+    //     next({
+    //       path: '/user/first'
+    //     })
+    //   }
+    // },
     component: () => import(/* webpackChunkName: "user" */ '../views/UserHome.vue')
   }, {
     path: '/user/first',
     name: 'FirstLogin',
-    meta: { requiresAuth: true },
+    // meta: { requiresAuth: true },
+    // TODO: Add before enter to verify if needs to fill something
     component: () => import(/* webpackChunkName: "first" */ '../views/FirstLogin.vue')
   }
 ]

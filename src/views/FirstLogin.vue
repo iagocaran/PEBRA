@@ -20,14 +20,14 @@
                   type="text"
                   :rules="companyRules"
                 ></v-text-field>
-                <v-text-field
-                  label="CNPJ"
-                  name="cnpj"
-                  v-model="data.document"
-                  prepend-icon="mdi-card-text"
-                  type="text"
-                  :rules="cnpjRules"
-                ></v-text-field>
+<!--                <v-text-field-->
+<!--                  label="CNPJ"-->
+<!--                  name="cnpj"-->
+<!--                  v-model="data.document"-->
+<!--                  prepend-icon="mdi-card-text"-->
+<!--                  type="text"-->
+<!--                  :rules="cnpjRules"-->
+<!--                ></v-text-field>-->
                 <v-autocomplete
                   label="Selecione alguns de seus produtos"
                   prepend-icon="mdi-cart"
