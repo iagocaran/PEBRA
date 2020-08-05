@@ -55,8 +55,8 @@
         </div>
         <v-row pb-12>
           <v-col class="text-center">
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-information-variant</v-icon>
-            <h3 class="mb-5">Informação</h3>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-clock</v-icon>
+            <h3 class="mb-5">Tempo</h3>
             <p>Você ganha tempo ao achar a informação diretamente, sem precisar procurar em diversos locais</p>
           </v-col>
           <v-col class="text-center">
@@ -90,19 +90,19 @@
         </div>
         <v-row style="fontSize:1.25rem">
           <v-col class="text-center">
-            <h2 class="mb-5">Estudos de Mercado</h2>
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-chart-line</v-icon>
-            <p>Você sabe como seu setor está na economia e como reagir</p>
-          </v-col>
-          <v-col class="text-center">
-            <h2 class="mb-5">Países importadores</h2>
+            <h2 class="mb-5">Caminho Exportador</h2>
             <v-icon size="50" class="mb-5" style="color:#00A000">mdi-routes</v-icon>
-            <p>Você sabe pra qual paises você consegue exportar e conhecer melhor seu público alvo</p>
+            <p>Te ajuda e te guia no processo de exportação. Você consegue caminhar no seu próprio ritmo e sem depender de terceiros.</p>
           </v-col>
           <v-col class="text-center">
-            <h2 class="mb-5">Notícias</h2>
-            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-newspaper</v-icon>
-            <p>Reunimos notícias sobre seu ramo de mercado: normas, eventos, conferências, entre outros</p>
+            <h2 class="mb-5">Consórcio de Exportação</h2>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-handshake</v-icon>
+            <p>Você consegue montar grupos que conseguem atender à demanda do cliente, mesmo que sua produção seja baixa</p>
+          </v-col>
+          <v-col class="text-center">
+            <h2 class="mb-5">Análises de Mercado</h2>
+            <v-icon size="50" class="mb-5" style="color:#00A000">mdi-chart-line</v-icon>
+            <p>Fornecemos o que você precisa: Melhores países para seu produto e qual melhor momento de aumentar sua produção.</p>
           </v-col>
         </v-row>
       </v-container>
@@ -172,7 +172,7 @@
               <v-img
                 alt="PEBra Logo"
                 contain
-                :src="require('@/assets/home/PEBraLogo.png')"
+                :src="require('@/assets/home/pebra-white.png')"
                 width="100"
               />
             </div>
