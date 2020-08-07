@@ -41,9 +41,9 @@
       <div class="landing fixed-background" :style="{ backgroundImage: 'url(' + require('@/assets/home/porto.png') + ')' }">
         <div class="caption text-center">
           <h1>Bem vindo à PEBra</h1>
-          <h3>O lugar perfeito para a começar a exportar</h3>
+          <h3>O lugar perfeito para começar a exportar</h3>
           <v-btn x-large outlined tile dark style="border-width: 3px;font-family: 'Lato', sans-serif;"
-                 @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })">Começar!</v-btn>
+                 @click="$vuetify.goTo('#beneficios', { duration: 500, easing: 'easeInOutCubic' })">Conheça!!</v-btn>
         </div>
       </div>
 
@@ -56,17 +56,17 @@
           <v-col class="text-center">
             <v-icon size="50" class="mb-5" style="color:#00A000">mdi-train</v-icon>
             <h3 class="mb-5">Meu Caminho Exportador</h3>
-            <p>Tenha uma orientação personalizada ao longo da sua trajetória e aprenda como realiza-los passo a passo.</p>
+            <p>Tenha uma orientação personalizada ao longo da sua trajetória e aprenda como realiza-los alcançar seus objetivos passo a passo.</p>
           </v-col>
           <v-col class="text-center">
             <v-icon size="50" class="mb-5" style="color:#00A000">mdi-account-group</v-icon>
             <h3 class="mb-5">Consórcio de Exportação</h3>
-            <p>Participe de grupos, divida custos de transporte e realize parceirias  para complementar volumes.</p>
+            <p>Participe da comunidade, divida custos de transporte e realize parcerias para suprir grandes demandas.</p>
           </v-col>
           <v-col class="text-center">
             <v-icon size="50" class="mb-5" style="color:#00a000">mdi-chart-line</v-icon>
             <h3 class="mb-5">Análises de Mercado</h3>
-            <p>Acesso ao que você precisa: informações de profissionais, modificação de leis e indicação dos melhores países para mandar seu produto.</p>
+            <p>Acesso ao que você precisa: conheça quem exporta no seu setor, tenha informações de profissionais, receba modificações de leis e indicadores relacionados ao seu produto no mercado internacional.</p>
           </v-col>
         </v-row>
       </v-container>
@@ -91,7 +91,7 @@
           <v-col class="text-center">
             <h2 class="mb-5">Tempo</h2>
             <v-icon size="50" class="mb-5" style="color:#00A000">mdi-clock</v-icon>
-            <p>Ganhe tempo com ferramentas que auxiliam com os documentos de exportação, preenchimento automático e explicações simples.</p>
+            <p>Ganhe tempo com ferramentas feitas para resolver os documentos de exportação, com preenchimento automático de dados, explicações simples e simuladores acessíveis.</p>
           </v-col>
           <v-col class="text-center">
             <h2 class="mb-5">Autonomia</h2>
@@ -99,9 +99,9 @@
             <p>Realize os processos de exportação no seu próprio ritmo e sem a dependência de terceiros.</p>
           </v-col>
           <v-col class="text-center">
-            <h2 class="mb-5">Conteúdos</h2>
+            <h2 class="mb-5">Conteúdo</h2>
               <v-icon size="50" class="mb-5" style="color:#00A000">mdi-newspaper</v-icon>
-            <p>Informações relevantes e focadas de acordo com o seu perfil e produtos cadastrados.</p>
+            <p>Informações relevantes e direcionadas de acordo com seu perfil de empreendimento e seus produtos cadastrados.</p>
           </v-col>
         </v-row>
       </v-container>
@@ -126,7 +126,7 @@
               <v-col sm="8">
                 <blockquote class="blockquote pa-0">
                   <v-icon class="ma-4" style="vertical-align: bottom" color="#00A000">mdi-format-quote-open</v-icon>
-                  Antes eu não conseguia achar informação de qualidade tão fácil, eu tinha que procurar bastante. Com a PEBra eu consegui mais tempo para melhorar meu negócio.
+                  Antes eu não conseguia achar informação de qualidade tão fácil, eu tinha que procurar bastante. Agora com a PEBra eu consegui mais tempo para melhorar meu negócio.
                 </blockquote>
                 <v-divider class="my-4" style="border-color:#00A000"></v-divider>
                 <cite>&#8212; Eric, vendedor de Cachaça Artesanal</cite>
@@ -158,8 +158,8 @@
       </v-container>
 
       <v-container fluid class="text-center py-12" style="background-color:#FFF; color:rgb(80, 89, 98);">
-        <p class="mb-10" style="font-size: 1.25rem">Quer saber mais?</p>
-        <v-btn x-large @click="dialog = true" class="text-uppercase btn-secondary mb-4">Acesse a nossa plataforma</v-btn>
+        <p class="mb-10" style="font-size: 1.25rem">Ficou interessado?</p>
+        <v-btn x-large @click="dialog = true" class="text-uppercase btn-secondary mb-4">Acesse a plataforma</v-btn>
       </v-container>
     </v-content>
 
@@ -175,7 +175,7 @@
                 width="100"
               />
             </div>
-            <p>Caso tenha dúvidas ou sugestões de como podemos melhorar nosso serviço, não evite de nos contactar</p>
+            <p>Caso tenha dúvidas ou sugestões de como podemos melhorar nosso serviço, sinta-se convidado a nos contactar</p>
             <a id="contato" v-intersect.quiet="setSection"></a>
             <strong>Contato</strong>
             <p>(+55) 61 3314-1414<br>contato@pebra.com.br</p>
