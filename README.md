@@ -1,24 +1,6 @@
 # pebra
 
-## Project setup
-```
-npm install
-```
+## Sobre
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Este repositório contém um protótipo que fizemos para o hackathon BRASA HACKS.
+Todo o código aqui é experimental e não deve servir de base para outros projetos.
